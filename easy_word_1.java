@@ -13,8 +13,8 @@ Output: 4
 Explanation: The last word is "moon" with length 4.
 *************************************************************************************/
 
-public class LengthOfLastWord {
-    public static int lengthOfLastWord(String s) {
+public class Length {
+    public static int length(String s) {
       // Split the string into words \s+ will match one or more whitespace characters.
         String[] words = s.split("\\s+");
 
@@ -23,13 +23,14 @@ public class LengthOfLastWord {
             return 0;
         }
 
-        // Return the length of the last word
+        //words[words.length - 1]: This accesses the last element in the array, which is the last word in the original string.
+        //words[words.length - 1].length(): This finally retrieves the length of the last word.
         return words[words.length - 1].length();
     }
 
     public static void main(String[] args) {
-        String inputString = "Hello World";//provide your input here
-        int result = lengthOfLastWord(inputString);
+        String input = "Hello World";//provide your input here
+        int result = length(input);
         System.out.println(result);
     }
 }
